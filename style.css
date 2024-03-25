@@ -1,0 +1,99 @@
+
+/* Styling untuk semua halaman */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+}
+
+.container {
+  width: 30%;
+  max-width: 600px;
+  margin: 50px auto;
+  border: 1px solid #ccc;
+  background-color: #dae0e7;
+  padding: 30px;
+}
+
+h1 {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+th {
+  background-color: #f2f2f2;
+}
+
+.total {
+  font-weight: bold;
+}
+
+#totalPrice {
+  font-weight: bold;
+  color: blue;
+}
+
+#errorMessage {
+  background-color: rgb(255, 100, 100);
+  color: rgb(255, 255, 255);
+  margin-top: 10px;
+  text-align: center;
+}
+
+input {
+  width: 95%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  margin-top: 5px;
+}
+
+button {
+  background-color: #6386d1;
+  color: white;
+  width: 100%;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+/* Penyesuaian untuk halaman order.html */
+.menu {
+  list-style-type: none;
+  padding: 0;
+  margin-bottom: 20px;
+}
+
+.menu-item.clicked {
+  background-color: rgb(128, 194, 248);
+}
+
+.menu-item-box {
+  display: flex;
+  justify-content: space-between;
+}
+
+.menu-name {
+  flex: 1;
+  text-align: left;
+  padding: 5px;
+}
+
+.menu-price {
+  text-align: right;
+  color: rgb(22, 24, 22);
+  font-weight: bold;
+}
+

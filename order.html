@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Form</title>
+    <h1>Order Form</h1>
+    <link rel="stylesheet" href="./style.css">
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const menuItems = document.querySelectorAll(".menu-item");
+            const totalPriceElement = document.getElementById("totalPrice");
+            let totalPrice = 0;
+
+            // Fungsi untuk menambahkan harga saat menu diklik
+            function addToTotal(price) {
+                totalPrice += price;
+                totalPriceElement.textContent = "Rp " + totalPrice.toLocaleString(); // Menampilkan harga dengan format Rp x,xxx,xxx
+            }
+
+            // Tambahkan event listener pada setiap item menu
+            menuItems.forEach(function(item) {
+                item.addEventListener("click", function() {
+                    const price = parseFloat(item.getAttribute("data-price"));
+                    addToTotal(price);
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class="container">
+        <ul id="menu" class="menu">
+            <li class="menu-item" data-price="20000">
+                <div class="menu-item-box">
+                    <span class="menu-name">Cappucino</span>
+                    <span class="menu-price">Rp 20.000</span>
+                </div>
+            </li>
+            <li class="menu-item" data-price="25000">
+                <div class="menu-item-box">
+                    <span class="menu-name">Green Tea Latte</span>
+                    <span class="menu-price">Rp 25.000</span>
+                </div>
+            </li>
+            <li class="menu-item" data-price="25000">
+                <div class="menu-item-box">
+                    <span class="menu-name">Fish and Chips</span>
+                    <span class="menu-price">Rp 25.000</span>
+                </div>
+            </li>
+            <li class="menu-item" data-price="20000">
+                <div class="menu-item-box">
+                    <span class="menu-name">Tuna Sandwich</span>
+                    <span class="menu-price">Rp 20.000</span>
+                </div>
+            </li>
+            <li class="menu-item" data-price="4000">
+                <div class="menu-item-box">
+                    <span class="menu-name">Mineral Water</span>
+                    <span class="menu-price">Rp 4.000</span>
+                </div>
+            </li>
+            <li class="menu-item" data-price="10000">
+                <div class="menu-item-box">
+                    <span class="menu-name">French Fries</span>
+                    <span class="menu-price">Rp 10.000</span>
+                </div>
+            </li>
+        </ul>
+        
+
+        </ul>
+        <form action="#">
+            <table>
+                <tr>
+                    <th>Pesanan</th>
+                    <th>Harga</th>
+                </tr>
+                <tr>
+                    <td class="total">Total</td>
+                    <td id="totalPrice">Rp 0</td>
+                </tr>
+            </table>
+            <br>
+        </form>
+    </div>
+    <script src="./app.js"></script>
+</body>
+</html>
